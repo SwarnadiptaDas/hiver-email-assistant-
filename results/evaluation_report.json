@@ -1,53 +1,53 @@
 {
-  "total_evaluated": 1,
+  "total_evaluated": 3,
   "overall_composite": {
-    "mean": 0.7775000357627869,
-    "median": 0.7775000357627869,
-    "std": 0.0,
-    "min": 0.7775000357627869,
-    "max": 0.7775000357627869
+    "mean": 0.7887784259319306,
+    "median": 0.7825000357627869,
+    "std": 0.01613105927247234,
+    "min": 0.7767305397987365,
+    "max": 0.8071047022342682
   },
   "per_metric_stats": {
     "semantic_similarity": {
-      "mean": 1.000000238418579,
-      "median": 1.000000238418579,
-      "std": 0.0
+      "mean": 0.871856172879537,
+      "median": 0.9540313482284546,
+      "std": 0.18358627953116124
     },
     "intent_coverage": {
-      "mean": 0.75,
+      "mean": 0.74,
       "median": 0.75,
-      "std": 0.0
+      "std": 0.06557438524302
     },
     "tone": {
-      "mean": 0.8,
-      "median": 0.8,
-      "std": 0.0
+      "mean": 0.8833333333333333,
+      "median": 0.9,
+      "std": 0.07637626158259729
     },
     "completeness": {
-      "mean": 1,
-      "median": 1,
-      "std": 0.0
+      "mean": 0.9,
+      "median": 0.9,
+      "std": 0.09999999999999998
     },
     "actionability": {
-      "mean": 0.2,
+      "mean": 0.33333333333333337,
       "median": 0.2,
-      "std": 0.0
+      "std": 0.4163331998932266
     },
     "fluency": {
-      "mean": 0.0,
-      "median": 0.0,
-      "std": 0.0
+      "mean": 0.61,
+      "median": 0.9,
+      "std": 0.5284884104689525
     },
     "overall_judge": {
-      "mean": 1,
-      "median": 1,
-      "std": 0.0
+      "mean": 0.9666666666666667,
+      "median": 0.95,
+      "std": 0.028867513459481315
     }
   },
   "per_category_stats": {
     "billing": {
-      "mean": 0.7775000357627869,
-      "count": 1
+      "mean": 0.7887784259319306,
+      "count": 3
     }
   },
   "individual_results": [
@@ -60,35 +60,176 @@
           "score": 1.000000238418579
         },
         "intent_coverage": {
-          "score": 0.75,
+          "score": 0.67,
           "intents_found": [
-            "question about invoice discrepancy",
-            "request for explanation of overage fee",
-            "need to resolve issue before accounting closes the month"
+            "Explain invoice discrepancy",
+            "Overage fee inquiry",
+            "Need resolution before month-end"
           ],
           "intents_addressed": [
-            "question about invoice discrepancy",
-            "request for explanation of overage fee"
+            "Explain invoice discrepancy"
           ],
-          "reasoning": "The response addresses the main question about the invoice discrepancy and explains the reason for the difference, which is the additional user licenses and the prorated cost. However, it does not explicitly address the concern about resolving the issue before accounting closes the month, although it provides the necessary information for Sarah to potentially resolve the issue on her own."
+          "reasoning": "The response addresses the primary concern of the invoice discrepancy by explaining the additional cost is due to 20 extra user licenses. However, it does not directly address the overage fee inquiry or the urgency of resolving the issue before the month-end, which are also present in the original email."
         },
         "tone": {
           "score": 0.8,
           "reasoning": {
-            "professionalism": 1,
-            "empathy": 0.4,
+            "professional_tone": 1,
+            "empathy": 0.6,
             "appropriateness": 0.9
           }
         },
         "completeness": {
-          "score": 1,
+          "score": 1.0,
           "missing_points": [],
-          "reasoning": "The generated response covers all the key information and points that the reference response covers. It explains the reason for the difference in the invoice, mentions the prorated cost of the additional licenses, and provides instructions on where to view the exact breakdown. The generated response is almost identical to the reference response, indicating that it fully addresses the concerns and questions raised in the incoming email."
+          "reasoning": "The generated response covers all the key information and points that the reference response covers. It explains the reason for the difference in the invoice amount, provides the prorated cost for the additional licenses, and directs the user to the exact breakdown on the attached invoice PDF."
+        },
+        "actionability": {
+          "score": 0.0,
+          "actions_found": [],
+          "reasoning": "The response provides an explanation for the difference in cost, but it does not provide clear next steps for the customer. There are no specific actions, timelines, or follow-up instructions for the customer to take."
+        },
+        "fluency": {
+          "grammatical_correctness": 1,
+          "readability": 0.9,
+          "natural_flow": 0.8,
+          "overall_score": 0.9,
+          "reasoning": {
+            "grammatical_correctness": "The response is grammatically correct, with proper sentence structure and punctuation.",
+            "readability": "The response is easy to understand, with short sentences and simple language. However, the mention of a specific page number in the attached invoice PDF might require the reader to take an action, which slightly reduces readability.",
+            "natural_flow": "The response is clear and concise, but it feels a bit formal and lacks a personal touch. The transition between sentences is smooth, but the closing sentence ('Best regards, Support Team') feels somewhat abrupt and could be improved with a more personalized sign-off."
+          },
+          "score": 0.9
+        },
+        "overall_judge": {
+          "score": 1.0,
+          "reasoning": "The generated response fully addresses the customer's question by explaining the reason for the difference in the invoice, which is due to the additional user licenses. It provides a clear breakdown of the cost and directs the customer to where they can find more detailed information. The response is professional, helpful, and concise, ensuring that the customer's issue is resolved before their accounting closes the month. The generated response is nearly identical to the reference response, indicating a high level of quality and appropriateness for resolving the customer's query."
+        }
+      },
+      "composite_score": 0.7825000357627869,
+      "weights_used": {
+        "semantic_similarity": 0.15,
+        "intent_coverage": 0.25,
+        "tone": 0.15,
+        "completeness": 0.2,
+        "actionability": 0.1,
+        "fluency": 0.05,
+        "overall_judge": 0.1
+      }
+    },
+    {
+      "email_id": "email_002",
+      "email_subject": "Card declined but I have funds",
+      "category": "billing",
+      "metrics": {
+        "semantic_similarity": {
+          "score": 0.6615369319915771
+        },
+        "intent_coverage": {
+          "score": 0.8,
+          "intents_found": [
+            "Report credit card payment failure",
+            "Request re-run of charge",
+            "Prevent service interruption"
+          ],
+          "intents_addressed": [
+            "Report credit card payment failure",
+            "Request re-run of charge",
+            "Prevent service interruption"
+          ],
+          "reasoning": "The incoming email reports a credit card payment failure, requests a re-run of the charge, and expresses concern about potential service interruption. The generated response acknowledges the payment failure, attempts to re-run the charge, and offers alternative solutions to prevent service interruption, thus addressing all the identified intents."
+        },
+        "tone": {
+          "score": 0.95,
+          "reasoning": {
+            "professional_tone": "The response is well-structured, clear, and concise, with a polite and courteous tone, indicating a high level of professionalism (score: 0.95).",
+            "empathy": "The response shows empathy by acknowledging the customer's issue and appreciation for their efforts to verify with their bank, demonstrating understanding and a willingness to help (score: 0.9).",
+            "appropriateness": "The response is highly relevant to the context, providing a direct solution to the customer's problem and offering alternatives, making it very appropriate (score: 0.98)."
+          }
+        },
+        "completeness": {
+          "score": 0.8,
+          "missing_points": [],
+          "reasoning": "The generated response covers all the key information and points that the reference response covers, including acknowledging the customer's issue, re-running the charge, and offering assistance if needed. However, the generated response is more detailed and provides additional information, such as the possible cause of the issue and alternative solutions, which makes it slightly more verbose than the reference response. The tone and language used are also slightly different, with the generated response being more formal and the reference response being more concise and straightforward."
+        },
+        "actionability": {
+          "score": 0.8,
+          "actions_found": [
+            "contact your bank to see if they can provide any additional information or whitelist our charges",
+            "let us know if you have any other questions or concerns",
+            "explore alternative payment methods"
+          ],
+          "reasoning": "The response provides some clear next steps for the customer, such as contacting their bank or exploring alternative payment methods. However, the timeline for these actions is not explicitly stated, and the customer is not given a specific deadline or follow-up instruction. The response does provide a clear explanation of what the support team has done (re-running the charge) and what the customer can expect (a receipt if the payment is successful). Overall, the response provides some guidance, but could be improved with more specific actions and timelines."
+        },
+        "fluency": {
+          "scores": {
+            "grammatical_correctness": 1.0,
+            "readability": 0.9,
+            "natural_flow": 0.95
+          },
+          "reasoning": {
+            "grammatical_correctness": "The email response is grammatically correct, with proper sentence structure, verb tense, and punctuation.",
+            "readability": "The response is easy to read and understand, but some sentences are a bit long and convoluted, which may make them harder to follow for non-native English speakers or those with reading difficulties.",
+            "natural_flow": "The response flows naturally, with each sentence building on the previous one to provide a clear explanation and solution to the issue. The tone is also polite and helpful, making the response feel friendly and supportive."
+          },
+          "score": 0.0
+        },
+        "overall_judge": {
+          "score": 0.95,
+          "reasoning": "The generated response is professional, helpful, and directly answers the customer's question. It provides a clear explanation of the possible cause of the issue and offers a solution by re-running the charge manually. The response also anticipates potential further issues and provides guidance on how to resolve them, such as contacting the bank or exploring alternative payment methods. The tone is polite and courteous, likely to satisfy the customer. The only reason it's not a perfect score is that the response is slightly longer and more verbose than the reference response, which conveys the same information in a more concise manner."
+        }
+      },
+      "composite_score": 0.7767305397987365,
+      "weights_used": {
+        "semantic_similarity": 0.15,
+        "intent_coverage": 0.25,
+        "tone": 0.15,
+        "completeness": 0.2,
+        "actionability": 0.1,
+        "fluency": 0.05,
+        "overall_judge": 0.1
+      }
+    },
+    {
+      "email_id": "email_003",
+      "email_subject": "Request for W-9",
+      "category": "billing",
+      "metrics": {
+        "semantic_similarity": {
+          "score": 0.9540313482284546
+        },
+        "intent_coverage": {
+          "score": 0.75,
+          "intents_found": [
+            "Request for W-9 form",
+            "Notification of vendor setup",
+            "Request for invoice processing"
+          ],
+          "intents_addressed": [
+            "Request for W-9 form",
+            "Request for invoice processing"
+          ],
+          "reasoning": "The response addresses the request for the W-9 form by providing the required document and also mentions the pending invoice #INV-8892, showing that the response is aware of the invoice processing request. However, the response does not explicitly acknowledge the notification of vendor setup, which is why the score is not 1."
+        },
+        "tone": {
+          "score": 0.9,
+          "reasoning": {
+            "professional_tone": "The response is professional, polite, and to the point. It uses a formal greeting and closing, which is suitable for a business communication.",
+            "empathy": "The situation does not require empathy, as it's a straightforward request and response. However, the tone is still friendly and cooperative.",
+            "appropriateness": "The response is appropriate for the context. It directly addresses the request made in the incoming email and provides the required documentation. The only thing that prevents it from being perfect is the lack of a specific name or title in the closing, but 'Support Team' is a common and acceptable way to sign off in customer support emails."
+          }
+        },
+        "completeness": {
+          "score": 0.9,
+          "missing_points": [],
+          "reasoning": "The generated response covers all the key information and points that the reference response covers. The generated response includes the attachment of the W-9 form and mentions the pending invoice. However, the generated response includes the invoice number (#INV-8892) which is present in the incoming email but not in the reference response. The only minor difference is the sender's team name, which is 'Finance Team' in the reference response and 'Support Team' in the generated response. Since the team name is not crucial to the main content, the score is 0.9."
         },
         "actionability": {
           "score": 0.2,
-          "actions_found": [],
-          "reasoning": "The response provides an explanation for the issue and includes an attachment with more information, but it does not provide clear next steps for the customer. There are no specific actions, timelines, or follow-up instructions, leaving the customer without a clear understanding of what to do next or what to expect."
+          "actions_found": [
+            "Let me know if you need any further documentation"
+          ],
+          "reasoning": "The response provides a clear attachment of the W-9 form, but the next steps for the customer are vague. The customer is asked to 'let me know' if they need further documentation, but there is no specific timeline, follow-up instruction, or clear call to action. The customer may need to initiate another email or contact to proceed, which may lead to delays or confusion."
         },
         "fluency": {
           "grammatical_correctness": 1.0,
@@ -96,17 +237,18 @@
           "natural_flow": 0.9,
           "overall_score": 0.93,
           "reasoning": {
-            "grammatical_correctness": "The email is free of grammatical errors, with proper sentence structure and punctuation.",
-            "readability": "The language used is clear and concise, but some technical terms like 'prorated cost' might be unfamiliar to non-technical readers, which slightly reduces readability.",
-            "natural_flow": "The email follows a logical structure, introducing the issue, explaining the cause, and providing a solution. However, the transition to the sentence about the invoice PDF could be smoother, which is why it doesn't score a perfect 1.0."
-          }
+            "grammatical_correctness": "The response is completely free of grammatical errors, with proper punctuation, verb tense, and sentence structure.",
+            "readability": "The response is easy to understand, but the sentence 'Let me know if you need any further documentation to process the pending invoice #INV-8892.' is slightly formal and could be rephrased for better clarity.",
+            "natural_flow": "The response flows well, but the transition between the two paragraphs could be smoother. A connecting phrase or sentence would improve the coherence of the message."
+          },
+          "score": 0.93
         },
         "overall_judge": {
-          "score": 1,
-          "reasoning": "The generated response accurately answers the customer's question, providing a clear explanation for the difference in the invoice amount. It is helpful, as it includes a specific breakdown of the costs and directs the customer to the relevant information. The tone is professional, and the response addresses the customer's urgency, implying that the issue will be resolved promptly. Overall, a customer would be satisfied with this response, as it is succinct, informative, and courteous."
+          "score": 0.95,
+          "reasoning": "The generated response answers the question by providing the requested W-9 form, is helpful by offering additional support, and is professional in tone and language. The only area for improvement is that the response could acknowledge the context of the vendor setup and express gratitude for the opportunity, as seen in the reference response. However, the inclusion of the invoice number (#INV-8892) adds a personal touch and shows attention to detail, which would likely increase customer satisfaction."
         }
       },
-      "composite_score": 0.7775000357627869,
+      "composite_score": 0.8071047022342682,
       "weights_used": {
         "semantic_similarity": 0.15,
         "intent_coverage": 0.25,

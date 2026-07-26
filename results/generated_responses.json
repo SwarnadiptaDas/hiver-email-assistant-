@@ -16,18 +16,64 @@
         "subject": "Re: Invoice discrepancy for July",
         "body": "Hi Sarah,\n\nThank you for reaching out about this. I've looked into your account and can see the difference is due to the additional 20 user licenses added mid-month.\n\nThe prorated cost for these licenses comes to $600. You can view the exact breakdown on page 2 of the attached invoice PDF.\n\nBest regards,\nSupport Team"
       },
-      "generation_time_seconds": 1.46,
+      "generation_time_seconds": 1.1,
       "metadata": {
         "urgency": "medium",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "email_id": "email_002",
+      "category": "billing",
+      "incoming_email": {
+        "from": "mike.j@startup.co",
+        "subject": "Card declined but I have funds",
+        "body": "Hello,\n\nMy credit card on file keeps failing for this month's renewal of the Pro plan. I've verified with my bank and there are sufficient funds.\n\nCan you attempt to re-run the charge? I don't want our service to be interrupted.\n\nMike"
+      },
+      "reference_response": {
+        "subject": "Re: Card declined but I have funds",
+        "body": "Hi Mike,\n\nThanks for letting us know! We often see this when the bank's fraud detection blocks the charge temporarily.\n\nI have just re-run the payment manually and it went through successfully. You should receive a receipt shortly.\n\nLet us know if you need anything else.\n\nBest,\nBilling Team"
+      },
+      "generated_response": {
+        "subject": "Re: Card declined but I have funds",
+        "body": "Hi Mike,\n\nThanks for letting us know about the issue with your credit card payment. We appreciate you verifying with your bank that you have sufficient funds, as this helps us narrow down the possible causes.\n\nI've gone ahead and manually re-run the charge for your Pro plan renewal. If the issue persists, it's possible that the bank's fraud detection system is temporarily blocking the charge. In that case, you may want to contact your bank to see if they can provide any additional information or whitelist our charges.\n\nIf the re-run is successful, you should receive a receipt shortly confirming the payment. If not, we can explore alternative payment methods to ensure your service remains uninterrupted. Please let us know if you have any other questions or concerns, or if there's anything else we can assist you with.\n\nBest,\nSupport Team"
+      },
+      "generation_time_seconds": 2.34,
+      "metadata": {
+        "urgency": "high",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "email_id": "email_003",
+      "category": "billing",
+      "incoming_email": {
+        "from": "accounting@bigco.com",
+        "subject": "Request for W-9",
+        "body": "To whom it may concern,\n\nWe are setting you up as a vendor in our system. Please provide a copy of your most recent W-9 form.\n\nOnce received, we can process your pending invoice #INV-8892.\n\nThank you,\nAccounting Dept"
+      },
+      "reference_response": {
+        "subject": "Re: Request for W-9",
+        "body": "Hello,\n\nThank you for reaching out. Please find our most recent W-9 attached to this email.\n\nLet me know if you need any further documentation to process the pending invoice.\n\nBest,\nFinance Team"
+      },
+      "generated_response": {
+        "subject": "Re: Request for W-9",
+        "body": "Hello,\n\nThank you for reaching out. Please find our most recent W-9 attached to this email.\n\nLet me know if you need any further documentation to process the pending invoice #INV-8892.\n\nBest,\nSupport Team"
+      },
+      "generation_time_seconds": 0.41,
+      "metadata": {
+        "urgency": "low",
         "sentiment": "neutral",
         "requires_action": true
       }
     }
   ],
   "summary": {
-    "total": 1,
-    "successful": 1,
+    "total": 3,
+    "successful": 3,
     "failed": 0,
-    "avg_generation_time": 1.46
+    "avg_generation_time": 1.28
   }
 }

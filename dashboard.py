@@ -52,6 +52,18 @@ st.markdown("""
     /* Sidebar */
     [data-testid="stSidebar"] {
         background: linear-gradient(180deg, #0f3460 0%, #16213e 100%);
+        color: white;
+    }
+    
+    /* Force all text in the sidebar to be white */
+    [data-testid="stSidebar"] p, 
+    [data-testid="stSidebar"] span, 
+    [data-testid="stSidebar"] div, 
+    [data-testid="stSidebar"] label,
+    [data-testid="stSidebar"] h1,
+    [data-testid="stSidebar"] h2,
+    [data-testid="stSidebar"] h3 {
+        color: white !important;
     }
     
     /* Cards */
