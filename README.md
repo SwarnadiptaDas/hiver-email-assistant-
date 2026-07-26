@@ -1,18 +1,27 @@
 # Hiver AI Email Response System
 
-> An AI-powered email reply suggestion system with comprehensive, multi-dimensional quality evaluation.
+> An AI-powered email reply suggestion system with comprehensive, multi-dimensional quality evaluation and an interactive web dashboard.
 
 ## 🎯 Overview
 
 This system takes incoming customer support emails and generates intelligent suggested replies — grounded in a dataset of past email conversations using **RAG (Retrieval-Augmented Generation)**. It then evaluates each generated response across **7 quality dimensions** to produce per-response and overall system scores.
 
 ```
-Incoming Email → [RAG Retriever] → [LLM Generator] → Suggested Reply
-                       ↓                                     ↓
-              Past Email Dataset                    Multi-Metric Evaluator
-                                                          ↓
-                                              Per-Response & System Scores
+Incoming Email → [FAISS RAG Retriever] → [Groq Llama-3.3 Generator] → Suggested Reply
+                        ↓                                                      ↓
+               Past Email Dataset (50 pairs)                    7-Metric Evaluator
+                                                                       ↓
+                                                       Composite Score + Explainability
+                                                                       ↓
+                                                         Streamlit Interactive Dashboard
 ```
+
+### Key Differentiators
+- **7-metric weighted evaluation** — not just one arbitrary number
+- **Evaluator meta-validation** — proves the metrics catch bad responses
+- **Interactive Streamlit dashboard** — visual charts, live demo, dataset explorer
+- **FAISS vector retrieval** — production-grade semantic search
+- **Groq (Llama 3.3 70B)** — blazing fast inference
 
 ## 🏗️ Architecture
 
@@ -121,8 +130,14 @@ python evaluate.py
 # 5. Evaluate a subset
 python evaluate.py --count 5
 
-# 6. Interactive demo
+# 6. Interactive CLI demo
 python demo.py
+
+# 7. 🌐 Launch the interactive web dashboard
+streamlit run dashboard.py
+
+# 8. 🔬 Run evaluator meta-validation (prove the metrics work)
+python validate_evaluator.py
 ```
 
 ### Regenerate the Dataset (Optional)

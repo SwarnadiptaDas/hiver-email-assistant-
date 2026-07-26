@@ -1,0 +1,98 @@
+{
+  "total": 7,
+  "passed": 6,
+  "accuracy_pct": 85.71428571428571,
+  "results": [
+    {
+      "label": "PERFECT Response",
+      "tier": "HIGH",
+      "expected": "> 0.80",
+      "composite": 0.8383407043218613,
+      "semantic": 0.8689380288124084,
+      "intent": 0.83,
+      "tone": 0.95,
+      "complete": 0.9,
+      "action": 0.8,
+      "fluency": 0.0,
+      "judge": 0.98
+    },
+    {
+      "label": "GOOD Response (minor gaps)",
+      "tier": "HIGH",
+      "expected": "0.65-0.80",
+      "composite": 0.4745192527770996,
+      "semantic": 0.6634616851806641,
+      "intent": 0.5,
+      "tone": 0.6,
+      "complete": 0.4,
+      "action": 0.2,
+      "fluency": 0.0,
+      "judge": 0.6
+    },
+    {
+      "label": "EVASIVE Response (no answer)",
+      "tier": "LOW",
+      "expected": "< 0.50",
+      "composite": 0.12957783460617067,
+      "semantic": 0.3971855640411377,
+      "intent": 0.0,
+      "tone": 0.2,
+      "complete": 0.0,
+      "action": 0.0,
+      "fluency": 0.8,
+      "judge": 0.0
+    },
+    {
+      "label": "OFF-TOPIC Response",
+      "tier": "LOW",
+      "expected": "< 0.40",
+      "composite": 0.11362059398740532,
+      "semantic": 0.05413729324936867,
+      "intent": 0.0,
+      "tone": 0.07,
+      "complete": 0.0,
+      "action": 0.5,
+      "fluency": 0.9,
+      "judge": 0.0
+    },
+    {
+      "label": "HALLUCINATED Response (wrong info)",
+      "tier": "LOW",
+      "expected": "< 0.50",
+      "composite": 0.2688974913954735,
+      "semantic": 0.49264994263648987,
+      "intent": 0.5,
+      "tone": 0.2,
+      "complete": 0.0,
+      "action": 0.2,
+      "fluency": 0.0,
+      "judge": 0.2
+    },
+    {
+      "label": "RUDE Response",
+      "tier": "LOW",
+      "expected": "< 0.45",
+      "composite": 0.17923195868730543,
+      "semantic": 0.461546391248703,
+      "intent": 0.2,
+      "tone": 0.2,
+      "complete": 0.0,
+      "action": 0.0,
+      "fluency": 0.6,
+      "judge": 0.0
+    },
+    {
+      "label": "INCOMPLETE Response (one word)",
+      "tier": "LOW",
+      "expected": "< 0.30",
+      "composite": 0.04912276396155357,
+      "semantic": 0.08415175974369049,
+      "intent": 0.0,
+      "tone": 0.0,
+      "complete": 0.0,
+      "action": 0.0,
+      "fluency": 0.73,
+      "judge": 0.0
+    }
+  ]
+}
