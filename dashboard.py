@@ -225,7 +225,7 @@ with st.sidebar:
     else:
         st.error("GROQ_API_KEY not set!")
     st.markdown("---")
-    st.caption("Hiver Open Challenge · 2024")
+    st.caption("Hiver Open Challenge · 2026")
 
 
 # ─────────────────────────────────────────────
