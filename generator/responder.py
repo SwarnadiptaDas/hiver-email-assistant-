@@ -2,21 +2,18 @@ import os
 import time
 import json
 from dotenv import load_dotenv
-import google.generativeai as genai
+from groq import Groq
 
 # Try to load environment variables from .env
 load_dotenv()
 
 class EmailResponder:
-    def __init__(self, retriever, model_name: str = 'gemini-2.0-flash'):
+    def __init__(self, retriever, model_name: str = 'llama-3.3-70b-versatile'):
         self.retriever = retriever
         self.model_name = model_name
         
-        api_key = os.environ.get("GEMINI_API_KEY")
-        if api_key:
-            genai.configure(api_key=api_key)
-            
-        self.model = genai.GenerativeModel(self.model_name)
+        api_key = os.environ.get("GROQ_API_KEY")
+        self.client = Groq(api_key=api_key) if api_key else None
 
     def _build_prompt(self, incoming_email: dict, retrieved_examples: list[dict]) -> str:
         prompt = (
@@ -51,13 +48,21 @@ class EmailResponder:
         retrieved_examples = self.retriever.retrieve(incoming_text, top_k=3)
         prompt = self._build_prompt(incoming_email, retrieved_examples)
         
+        if not self.client:
+            raise ValueError("GROQ_API_KEY environment variable is not set. Please set it in .env or environment.")
+            
         max_retries = 3
         base_delay = 2
         
         for attempt in range(max_retries):
             try:
-                response = self.model.generate_content(prompt)
-                response_text = response.text.strip()
+                response = self.client.chat.completions.create(
+                    model=self.model_name,
+                    messages=[
+                        {"role": "user", "content": prompt}
+                    ]
+                )
+                response_text = response.choices[0].message.content.strip()
                 
                 # Constructing the expected output dictionary
                 subject = incoming_email.get("subject", "")
@@ -70,10 +75,11 @@ class EmailResponder:
                 }
                 
             except Exception as e:
+                print(f"Generation error: {e}")
                 if attempt == max_retries - 1:
                     return {
                         "subject": f"Re: {incoming_email.get('subject', '')}",
-                        "body": "Error generating response. Please try again later."
+                        "body": f"Error generating response: {str(e)}"
                     }
                 time.sleep(base_delay * (2 ** attempt))
 

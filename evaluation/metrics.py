@@ -4,8 +4,8 @@ import time
 import re
 from typing import Dict, Any, List
 from dotenv import load_dotenv
+from groq import Groq
 
-import google.generativeai as genai
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -25,13 +25,13 @@ class EmbeddingMetrics:
         return float(similarity)
 
 class LLMMetrics:
-    def __init__(self, model_name: str = 'gemini-2.0-flash'):
-        api_key = os.environ.get("GEMINI_API_KEY")
+    def __init__(self, model_name: str = 'llama-3.3-70b-versatile'):
+        api_key = os.environ.get("GROQ_API_KEY")
         if not api_key:
-            raise ValueError("GEMINI_API_KEY environment variable not set")
+            raise ValueError("GROQ_API_KEY environment variable not set")
         
-        genai.configure(api_key=api_key)
-        self.model = genai.GenerativeModel(model_name)
+        self.client = Groq(api_key=api_key)
+        self.model_name = model_name
         self.sleep_time = 0.5
         
     def _parse_json_response(self, text: str) -> Dict[str, Any]:
@@ -64,8 +64,14 @@ class LLMMetrics:
         for attempt in range(max_retries):
             try:
                 time.sleep(self.sleep_time)
-                response = self.model.generate_content(prompt)
-                return self._parse_json_response(response.text)
+                response = self.client.chat.completions.create(
+                    model=self.model_name,
+                    messages=[
+                        {"role": "user", "content": prompt}
+                    ]
+                )
+                response_text = response.choices[0].message.content.strip()
+                return self._parse_json_response(response_text)
             except Exception as e:
                 print(f"LLM call failed (attempt {attempt + 1}/{max_retries}): {str(e)}")
                 if attempt == max_retries - 1:

@@ -3,20 +3,18 @@ import json
 import asyncio
 from datetime import datetime
 from dotenv import load_dotenv
-import google.generativeai as genai
+from groq import Groq
 
 # Load environment variables from .env file if it exists
 load_dotenv()
 
-# Configure Gemini API
-api_key = os.environ.get("GEMINI_API_KEY")
+# Configure Groq API
+api_key = os.environ.get("GROQ_API_KEY")
 if not api_key:
-    print("Warning: GEMINI_API_KEY environment variable is not set. Generation will fail if key is not found.")
+    print("Warning: GROQ_API_KEY environment variable is not set. Generation will fail if key is not found.")
     
-genai.configure(api_key=api_key)
-
-# We use the recommended gemini-2.0-flash model
-model = genai.GenerativeModel('gemini-2.0-flash')
+client = Groq(api_key=api_key) if api_key else None
+model_name = 'llama-3.3-70b-versatile'
 
 CATEGORIES = {
     "billing": 7,
@@ -64,9 +62,21 @@ async def generate_category(category: str, count: int) -> list:
     print(f"Generating {count} emails for category: {category}...")
     prompt = PROMPT_TEMPLATE.format(category=category, count=count)
     
+    if not client:
+        print(f"Error: Groq client is not initialized.")
+        return []
+        
     try:
-        response = await model.generate_content_async(prompt)
-        text = response.text.strip()
+        # Offload blocking Groq HTTP request to a background thread
+        loop = asyncio.get_running_loop()
+        response = await loop.run_in_executor(
+            None,
+            lambda: client.chat.completions.create(
+                model=model_name,
+                messages=[{"role": "user", "content": prompt}]
+            )
+        )
+        text = response.choices[0].message.content.strip()
         
         # Clean up markdown if the model still returns it
         if text.startswith("```json"):
