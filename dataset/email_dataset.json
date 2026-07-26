@@ -1,0 +1,918 @@
+{
+  "metadata": {
+    "generated_at": "2026-07-26T14:00:00Z",
+    "total_count": 50,
+    "categories": {
+      "billing": 7,
+      "technical_support": 8,
+      "feature_request": 6,
+      "account_management": 6,
+      "onboarding": 6,
+      "complaint": 7,
+      "general_inquiry": 5,
+      "follow_up": 5
+    }
+  },
+  "emails": [
+    {
+      "id": "email_001",
+      "category": "billing",
+      "incoming_email": {
+        "from": "sarah.chen@techcorp.io",
+        "subject": "Invoice discrepancy for July",
+        "body": "Hi,\n\nI noticed our July invoice shows $2,400 but we're on the Growth plan at $1,800/month. Could you explain the difference?\n\nIs there an overage fee we missed? We need to get this resolved before accounting closes the month.\n\nThanks,\nSarah"
+      },
+      "reference_response": {
+        "subject": "Re: Invoice discrepancy for July",
+        "body": "Hi Sarah,\n\nThank you for reaching out about this. I've looked into your account and can see the difference is due to the additional 20 user licenses added mid-month.\n\nThe prorated cost for these licenses comes to $600. You can view the exact breakdown on page 2 of the attached invoice PDF.\n\nBest regards,\nSupport Team"
+      },
+      "metadata": {
+        "urgency": "medium",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_002",
+      "category": "billing",
+      "incoming_email": {
+        "from": "mike.j@startup.co",
+        "subject": "Card declined but I have funds",
+        "body": "Hello,\n\nMy credit card on file keeps failing for this month's renewal of the Pro plan. I've verified with my bank and there are sufficient funds.\n\nCan you attempt to re-run the charge? I don't want our service to be interrupted.\n\nMike"
+      },
+      "reference_response": {
+        "subject": "Re: Card declined but I have funds",
+        "body": "Hi Mike,\n\nThanks for letting us know! We often see this when the bank's fraud detection blocks the charge temporarily.\n\nI have just re-run the payment manually and it went through successfully. You should receive a receipt shortly.\n\nLet us know if you need anything else.\n\nBest,\nBilling Team"
+      },
+      "metadata": {
+        "urgency": "high",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_003",
+      "category": "billing",
+      "incoming_email": {
+        "from": "accounting@bigco.com",
+        "subject": "Request for W-9",
+        "body": "To whom it may concern,\n\nWe are setting you up as a vendor in our system. Please provide a copy of your most recent W-9 form.\n\nOnce received, we can process your pending invoice #INV-8892.\n\nThank you,\nAccounting Dept"
+      },
+      "reference_response": {
+        "subject": "Re: Request for W-9",
+        "body": "Hello,\n\nThank you for reaching out. Please find our most recent W-9 attached to this email.\n\nLet me know if you need any further documentation to process the pending invoice.\n\nBest,\nFinance Team"
+      },
+      "metadata": {
+        "urgency": "low",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_004",
+      "category": "billing",
+      "incoming_email": {
+        "from": "dave@freelance.net",
+        "subject": "Cancel my subscription",
+        "body": "Hi,\n\nI am not using the product as much as I thought I would. Please cancel my monthly subscription effective immediately.\n\nI want to make sure I am not charged for next month.\n\nDave"
+      },
+      "reference_response": {
+        "subject": "Re: Cancel my subscription",
+        "body": "Hi Dave,\n\nI'm sorry to see you go! I have canceled your subscription effective immediately.\n\nYou will retain access until the end of your current billing cycle on August 15th, and you will not be charged further.\n\nIf you ever need us again, we'll be here.\n\nBest regards,\nSupport"
+      },
+      "metadata": {
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_005",
+      "category": "billing",
+      "incoming_email": {
+        "from": "lisa.m@retail.com",
+        "subject": "Change billing email",
+        "body": "Hi Support,\n\nPlease update the billing email on our account from finance@retail.com to lisa.m@retail.com. \n\nAlso, can you send me copies of the last 3 invoices to this new address?\n\nThanks,\nLisa"
+      },
+      "reference_response": {
+        "subject": "Re: Change billing email",
+        "body": "Hi Lisa,\n\nI have successfully updated your billing email to lisa.m@retail.com. Future invoices will be sent directly to you.\n\nI've also attached the last 3 invoices as requested. Let me know if you need anything else.\n\nBest,\nSupport Team"
+      },
+      "metadata": {
+        "urgency": "low",
+        "sentiment": "positive",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_006",
+      "category": "billing",
+      "incoming_email": {
+        "from": "founder@stealth.ai",
+        "subject": "Annual prepay discount?",
+        "body": "Hi there,\n\nWe are currently on the monthly Team plan. If we switch to annual prepayment, what kind of discount can you offer?\n\nWe are looking to optimize our SaaS spend and would be happy to commit for a year if the price is right.\n\nCheers,\nAlex"
+      },
+      "reference_response": {
+        "subject": "Re: Annual prepay discount?",
+        "body": "Hi Alex,\n\nGreat question! We offer a 20% discount if you switch from a monthly to an annual plan.\n\nFor the Team plan, this brings the cost down from $99/month to $79/month, billed annually at $948. If you'd like to proceed, I can send you a payment link.\n\nLet me know how you'd like to proceed!\n\nBest,\nSales Team"
+      },
+      "metadata": {
+        "urgency": "medium",
+        "sentiment": "positive",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_007",
+      "category": "billing",
+      "incoming_email": {
+        "from": "admin@nonprofit.org",
+        "subject": "Tax exemption status",
+        "body": "Hello,\n\nWe are a registered 501(c)(3) non-profit organization. We just started our subscription and I noticed tax was added to the receipt.\n\nHow do we provide our tax exemption certificate to remove these charges going forward, and can we get a refund for the tax already paid?\n\nThanks,\nAdmin"
+      },
+      "reference_response": {
+        "subject": "Re: Tax exemption status",
+        "body": "Hello,\n\nThank you for reaching out. Please reply to this email with a copy of your tax exemption certificate.\n\nOnce received, I will update your account to be tax-exempt for future invoices and issue a refund for the tax charged on your initial payment.\n\nLooking forward to hearing from you.\n\nBest,\nBilling Support"
+      },
+      "metadata": {
+        "urgency": "medium",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_008",
+      "category": "technical_support",
+      "incoming_email": {
+        "from": "dev@techcompany.com",
+        "subject": "API returning 500 errors",
+        "body": "Hi,\n\nStarting this morning, our integration is failing because your /v2/users endpoint is consistently returning 500 Internal Server Error.\n\nCan you please investigate ASAP? This is impacting our production environment.\n\nBest,\nDev Team"
+      },
+      "reference_response": {
+        "subject": "Re: API returning 500 errors",
+        "body": "Hi Dev Team,\n\nI apologize for the disruption. We experienced a brief database outage that affected the /v2/users endpoint.\n\nThe issue has now been resolved and the API is fully operational again. Please retry your requests, and let me know if you see any further errors.\n\nBest regards,\nEngineering Support"
+      },
+      "metadata": {
+        "urgency": "high",
+        "sentiment": "negative",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_009",
+      "category": "technical_support",
+      "incoming_email": {
+        "from": "susan.k@enterprise.com",
+        "subject": "Cannot log in, stuck in a loop",
+        "body": "Hello,\n\nWhenever I try to log in via SSO, it authenticates me, but then redirects me right back to the login screen.\n\nI have tried clearing my cookies and using incognito mode, but the issue persists. Please help.\n\nSusan"
+      },
+      "reference_response": {
+        "subject": "Re: Cannot log in, stuck in a loop",
+        "body": "Hi Susan,\n\nI'm sorry you're having trouble logging in. This loop usually occurs when your SSO identity provider isn't passing the correct email attribute.\n\nI've checked our logs and it seems your identity provider is sending an alias instead of your primary email. Please ask your IT admin to ensure the 'email' claim matches exactly.\n\nLet me know if they need any documentation from us.\n\nBest,\nSupport"
+      },
+      "metadata": {
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_010",
+      "category": "technical_support",
+      "incoming_email": {
+        "from": "mark@agency.com",
+        "subject": "Dashboard is loading very slowly",
+        "body": "Hi Support,\n\nFor the past few days, the main analytics dashboard takes over 30 seconds to load. Sometimes it times out completely.\n\nIs there an ongoing issue with performance? We rely heavily on this data.\n\nThanks,\nMark"
+      },
+      "reference_response": {
+        "subject": "Re: Dashboard is loading very slowly",
+        "body": "Hi Mark,\n\nThanks for reporting this. We're aware that the analytics dashboard has been slow for accounts with large datasets, and our engineering team is actively working on a fix.\n\nWe plan to deploy a performance patch later this week that should resolve the timeouts and speed up load times. I'll update you as soon as it's live.\n\nBest regards,\nSupport Team"
+      },
+      "metadata": {
+        "urgency": "medium",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_011",
+      "category": "technical_support",
+      "incoming_email": {
+        "from": "tanya@studio.net",
+        "subject": "Export to CSV missing columns",
+        "body": "Hi,\n\nWhen I use the 'Export to CSV' button on the project page, the resulting file is missing the 'Assigned To' and 'Due Date' columns.\n\nThese were present yesterday. Did something change? I really need this data for my weekly report.\n\nTanya"
+      },
+      "reference_response": {
+        "subject": "Re: Export to CSV missing columns",
+        "body": "Hi Tanya,\n\nYou are completely right, and I apologize for the inconvenience. A recent update accidentally removed those columns from the default export view.\n\nOur team has just rolled back that change, and the export should now include 'Assigned To' and 'Due Date' again. Could you give it another try and let me know if it works?\n\nBest,\nSupport Team"
+      },
+      "metadata": {
+        "urgency": "high",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_012",
+      "category": "technical_support",
+      "incoming_email": {
+        "from": "omar.f@shop.com",
+        "subject": "Mobile app crashing on launch (iOS)",
+        "body": "Hello,\n\nEver since I updated to iOS 17, your app crashes immediately upon opening. I just see the splash screen and then it closes.\n\nI've uninstalled and reinstalled but no luck. Please fix this.\n\nOmar"
+      },
+      "reference_response": {
+        "subject": "Re: Mobile app crashing on launch (iOS)",
+        "body": "Hi Omar,\n\nI'm so sorry you're experiencing crashes on iOS 17. Our mobile team has identified the bug and submitted a fix to the App Store.\n\nThe update (Version 3.1.2) should be available for download within the next 24 hours. Please keep an eye out for it and let us know if it resolves the issue.\n\nBest,\nMobile Support"
+      },
+      "metadata": {
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_013",
+      "category": "technical_support",
+      "incoming_email": {
+        "from": "chloe@data.io",
+        "subject": "Webhook deliveries failing",
+        "body": "Hi,\n\nAccording to your dashboard, webhooks sent to our endpoint https://data.io/webhooks are failing with a 403 error. But our servers don't show any blocked requests.\n\nCould you check your logs and see what exactly is happening?\n\nThanks,\nChloe"
+      },
+      "reference_response": {
+        "subject": "Re: Webhook deliveries failing",
+        "body": "Hi Chloe,\n\nI looked into our delivery logs for your webhooks. It appears that our requests are being blocked by Cloudflare before they even reach your servers, hence the 403 error.\n\nCould you please check your Cloudflare firewall rules and ensure our IP addresses (listed in our docs) are whitelisted? That should solve the delivery issue.\n\nBest,\nTechnical Support"
+      },
+      "metadata": {
+        "urgency": "high",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_014",
+      "category": "technical_support",
+      "incoming_email": {
+        "from": "ryan.w@marketing.co",
+        "subject": "Images not loading in Safari",
+        "body": "Hi,\n\nNone of the user profile images are loading when I browse the platform using Safari on my Mac. It works fine in Chrome.\n\nI'm on Safari 16.5. Is this a known issue?\n\nRyan"
+      },
+      "reference_response": {
+        "subject": "Re: Images not loading in Safari",
+        "body": "Hi Ryan,\n\nThanks for flagging this! We are aware of an issue where Safari's strict cross-site tracking prevention blocks our image CDN.\n\nAs a temporary workaround, you can disable 'Prevent cross-site tracking' in Safari's Privacy settings. Meanwhile, our engineers are deploying a permanent fix that will route images through our main domain.\n\nBest,\nSupport Team"
+      },
+      "metadata": {
+        "urgency": "low",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_015",
+      "category": "technical_support",
+      "incoming_email": {
+        "from": "jenny@sales.net",
+        "subject": "Search function broken",
+        "body": "Hello,\n\nWhen I type anything into the global search bar, it just spins forever and never returns any results.\n\nThis started happening today. I rely on search to find client records. Please fix!\n\nJenny"
+      },
+      "reference_response": {
+        "subject": "Re: Search function broken",
+        "body": "Hi Jenny,\n\nWe apologize for the inconvenience. Our search indexing service experienced a brief outage earlier today, which caused the spinning issue.\n\nThe service has been restarted and the search functionality is completely restored. You might need to refresh your browser for it to work. Please let me know if it's still acting up!\n\nBest,\nSupport"
+      },
+      "metadata": {
+        "urgency": "high",
+        "sentiment": "negative",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_016",
+      "category": "feature_request",
+      "incoming_email": {
+        "from": "greg@design.io",
+        "subject": "Dark mode support?",
+        "body": "Hi team,\n\nAre there any plans to add a dark mode theme to the web app? I stare at the screen all day and the bright white interface is causing eye strain.\n\nWould love to see this in a future update.\n\nThanks,\nGreg"
+      },
+      "reference_response": {
+        "subject": "Re: Dark mode support?",
+        "body": "Hi Greg,\n\nThanks for the feedback! I completely understand about the eye strain. \n\nI'm happy to tell you that Dark Mode is currently in beta and is scheduled to be released to all users by the end of next month! I'll go ahead and add your vote to this feature request so our product team knows it's highly anticipated.\n\nBest,\nProduct Team"
+      },
+      "metadata": {
+        "urgency": "low",
+        "sentiment": "positive",
+        "requires_action": false
+      }
+    },
+    {
+      "id": "email_017",
+      "category": "feature_request",
+      "incoming_email": {
+        "from": "alicia@events.com",
+        "subject": "Multiple attendees for one ticket",
+        "body": "Hello,\n\nRight now, when someone buys a group ticket, they have to fill out the info for all attendees immediately. It would be great if they could buy the ticket and assign names later.\n\nIs this something you could add? It causes a lot of friction for our corporate buyers.\n\nAlicia"
+      },
+      "reference_response": {
+        "subject": "Re: Multiple attendees for one ticket",
+        "body": "Hi Alicia,\n\nThat's a fantastic idea, and I can definitely see how that would reduce friction for corporate buyers.\n\nI have submitted this as a feature request to our product development team. While I can't guarantee a timeline, we prioritize requests based on user feedback. Thank you for helping us improve the platform!\n\nBest,\nSupport Team"
+      },
+      "metadata": {
+        "urgency": "medium",
+        "sentiment": "neutral",
+        "requires_action": false
+      }
+    },
+    {
+      "id": "email_018",
+      "category": "feature_request",
+      "incoming_email": {
+        "from": "tim@consulting.com",
+        "subject": "Export to PDF",
+        "body": "Hi,\n\nWe love the reporting dashboard, but we really need the ability to export the reports as PDFs to share with clients who don't have access to the platform.\n\nCurrently, we are taking screenshots, which is tedious and unprofessional.\n\nTim"
+      },
+      "reference_response": {
+        "subject": "Re: Export to PDF",
+        "body": "Hi Tim,\n\nThanks for writing in. We've heard this from a few other users as well, and I agree that screenshots are not ideal.\n\nI have good news! Our team is actively working on a PDF export feature right now. We expect to launch it in Q3. I've tagged your account so we can notify you as soon as it's available.\n\nBest,\nSupport Team"
+      },
+      "metadata": {
+        "urgency": "medium",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_019",
+      "category": "feature_request",
+      "incoming_email": {
+        "from": "karen@school.edu",
+        "subject": "Integration with Canvas LMS",
+        "body": "Hello,\n\nDo you have any plans to integrate directly with Canvas LMS? It would save our teachers hours of manual data entry every week if grades could sync automatically.\n\nPlease consider this!\n\nKaren"
+      },
+      "reference_response": {
+        "subject": "Re: Integration with Canvas LMS",
+        "body": "Hi Karen,\n\nThank you for reaching out! We know how crucial LMS integrations are for educators.\n\nWhile Canvas isn't on our immediate roadmap for this quarter, it's definitely on our radar. I've logged your request, which helps us prioritize future integrations. In the meantime, some users have had success using our Zapier integration to connect with Canvas.\n\nBest,\nSupport Team"
+      },
+      "metadata": {
+        "urgency": "low",
+        "sentiment": "positive",
+        "requires_action": false
+      }
+    },
+    {
+      "id": "email_020",
+      "category": "feature_request",
+      "incoming_email": {
+        "from": "ben@logistics.net",
+        "subject": "Bulk assign tags",
+        "body": "Hi,\n\nI have to assign tags to hundreds of shipments daily. Doing it one by one is killing my productivity. We desperately need a bulk select and tag feature.\n\nCan you guys build this?\n\nBen"
+      },
+      "reference_response": {
+        "subject": "Re: Bulk assign tags",
+        "body": "Hi Ben,\n\nI completely understand how tedious that must be. Bulk actions are incredibly important for efficiency.\n\nI've forwarded your feedback directly to our product manager who handles the shipments view. They are actually planning a revamp of that page soon, so this is perfect timing. I'll make sure they see your request.\n\nBest,\nSupport Team"
+      },
+      "metadata": {
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requires_action": false
+      }
+    },
+    {
+      "id": "email_021",
+      "category": "feature_request",
+      "incoming_email": {
+        "from": "sophia@retail.com",
+        "subject": "Customizable email templates",
+        "body": "Hello,\n\nThe standard email notifications sent to our customers look a bit generic. Can you add the ability for us to customize the HTML/CSS of these emails so they match our brand guidelines?\n\nThanks,\nSophia"
+      },
+      "reference_response": {
+        "subject": "Re: Customizable email templates",
+        "body": "Hi Sophia,\n\nThanks for your suggestion! Giving our users more branding control is definitely a priority for us.\n\nI've passed your request for HTML/CSS customization of email templates to our product team. Currently, we offer logo and color customization on the Enterprise plan. Would you like me to send you more details on that plan while we consider the broader feature?\n\nBest,\nSupport Team"
+      },
+      "metadata": {
+        "urgency": "low",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_022",
+      "category": "account_management",
+      "incoming_email": {
+        "from": "david@techcorp.io",
+        "subject": "Transfer ownership to new admin",
+        "body": "Hi,\n\nI am leaving the company next week. I need to transfer the primary ownership of our account to my colleague, Rachel (rachel@techcorp.io).\n\nHow do I go about doing this? I want to make sure I don't lose all our data when my email is deactivated.\n\nDavid"
+      },
+      "reference_response": {
+        "subject": "Re: Transfer ownership to new admin",
+        "body": "Hi David,\n\nThanks for reaching out, and best of luck with your next adventure!\n\nTo transfer ownership, please go to Settings > Team > Roles. Invite Rachel as an Admin first. Once she accepts, you can click the 'Transfer Ownership' button next to her name. Your data is tied to the workspace, not your email, so everything will remain intact.\n\nLet me know if you hit any snags!\n\nBest,\nSupport Team"
+      },
+      "metadata": {
+        "urgency": "medium",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_023",
+      "category": "account_management",
+      "incoming_email": {
+        "from": "jessica@startup.co",
+        "subject": "Increase API rate limit",
+        "body": "Hello,\n\nOur application usage has spiked and we are consistently hitting the 100 requests/minute API limit. \n\nCan we get this increased to 500 requests/minute? We are on the Pro plan.\n\nThanks,\nJessica"
+      },
+      "reference_response": {
+        "subject": "Re: Increase API rate limit",
+        "body": "Hi Jessica,\n\nThat's great news about your application's growth! \n\nI've reviewed your account and have temporarily bumped your rate limit to 500 requests/minute to prevent immediate disruptions. For a permanent increase, we typically require an upgrade to the Enterprise tier. I can have an account executive reach out to discuss this further if you'd like.\n\nBest,\nSupport Team"
+      },
+      "metadata": {
+        "urgency": "high",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_024",
+      "category": "account_management",
+      "incoming_email": {
+        "from": "kevin@agency.com",
+        "subject": "Downgrade plan",
+        "body": "Hi,\n\nWe need to scale back our expenses this quarter. Please downgrade our account from the Enterprise plan to the standard Team plan.\n\nI understand we will lose access to the advanced reporting features.\n\nKevin"
+      },
+      "reference_response": {
+        "subject": "Re: Downgrade plan",
+        "body": "Hi Kevin,\n\nI understand completely. I have successfully scheduled your downgrade to the Team plan. \n\nThe change will take effect at the end of your current billing cycle on the 30th. Until then, you will retain access to your advanced reporting. Please ensure you export any data you might need before that date.\n\nBest regards,\nAccount Management"
+      },
+      "metadata": {
+        "urgency": "medium",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_025",
+      "category": "account_management",
+      "incoming_email": {
+        "from": "anna@global.net",
+        "subject": "Merge two workspaces?",
+        "body": "Hello,\n\nWe accidentally created two separate workspaces ('Global North' and 'Global South'). We want to consolidate everything into just 'Global North'.\n\nIs there a way to merge these, or transfer the projects over automatically?\n\nAnna"
+      },
+      "reference_response": {
+        "subject": "Re: Merge two workspaces?",
+        "body": "Hi Anna,\n\nCurrently, we don't have an automated way to merge two workspaces directly. \n\nHowever, you can use our import/export tools! You can export all projects from 'Global South' as a CSV and then import that CSV into 'Global North'. Once you've confirmed everything looks good, you can simply delete the 'Global South' workspace. \n\nLet me know if you'd like a step-by-step guide for the export/import process.\n\nBest,\nSupport Team"
+      },
+      "metadata": {
+        "urgency": "medium",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_026",
+      "category": "account_management",
+      "incoming_email": {
+        "from": "peter@freelance.org",
+        "subject": "Delete my data",
+        "body": "Hi,\n\nI closed my account a few months ago, but I want to ensure that all my personal data and uploaded files have been permanently deleted from your servers in compliance with GDPR.\n\nPlease confirm.\n\nPeter"
+      },
+      "reference_response": {
+        "subject": "Re: Delete my data",
+        "body": "Hi Peter,\n\nThank you for reaching out. I can confirm that when you close your account, all associated data is placed in a queue for hard deletion.\n\nI have reviewed our systems and verified that your personal data and files were permanently purged from our servers 30 days after your cancellation, in full compliance with GDPR. We hold no further data regarding your account.\n\nBest regards,\nPrivacy Team"
+      },
+      "metadata": {
+        "urgency": "low",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_027",
+      "category": "account_management",
+      "incoming_email": {
+        "from": "luke@enterprise.com",
+        "subject": "Add more user seats",
+        "body": "Hi Support,\n\nWe need to add 5 more user seats to our account. When I try to invite them, it says we've hit our limit.\n\nCan you add 5 seats and bill the card on file? We need them activated today for new hires.\n\nLuke"
+      },
+      "reference_response": {
+        "subject": "Re: Add more user seats",
+        "body": "Hi Luke,\n\nAbsolutely! I've gone ahead and added 5 additional seats to your account. Your card on file has been charged the prorated amount for the remainder of your billing cycle.\n\nYou should now be able to invite your new hires without any issues. Welcome to the new team members!\n\nBest,\nAccount Support"
+      },
+      "metadata": {
+        "urgency": "high",
+        "sentiment": "positive",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_028",
+      "category": "onboarding",
+      "incoming_email": {
+        "from": "maria@newclient.com",
+        "subject": "Help setting up custom domain",
+        "body": "Hi,\n\nI'm going through the onboarding checklist and I'm stuck on the custom domain setup. I added the CNAME record in GoDaddy like the guide said, but it's been 24 hours and it still says 'Pending'.\n\nDid I do something wrong?\n\nMaria"
+      },
+      "reference_response": {
+        "subject": "Re: Help setting up custom domain",
+        "body": "Hi Maria,\n\nWelcome aboard! DNS issues can be tricky, but we'll get this sorted out.\n\nI checked the DNS propagation for your domain, and it looks like the CNAME record was added, but there's a typo in the target URL (it says 'hosting.yourdomain.com' instead of 'host.yourdomain.com'). If you correct that in GoDaddy, it should verify within a few hours.\n\nLet me know once you update it, and I'll keep an eye on it from my end!\n\nBest,\nOnboarding Team"
+      },
+      "metadata": {
+        "urgency": "medium",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_029",
+      "category": "onboarding",
+      "incoming_email": {
+        "from": "john.doe@startup.io",
+        "subject": "Where is the API key?",
+        "body": "Hello,\n\nI just signed up for a trial account. The quickstart guide says I need an API key to initialize the SDK, but I can't find it anywhere in the dashboard.\n\nWhere do I generate this?\n\nJohn"
+      },
+      "reference_response": {
+        "subject": "Re: Where is the API key?",
+        "body": "Hi John,\n\nWelcome to the platform! \n\nYou can generate your API key by navigating to Settings (the gear icon in the bottom left) > Developer > API Keys. Just click the 'Create Secret Key' button. Make sure to copy it immediately, as it won't be shown again for security reasons.\n\nLet me know if you need help with anything else as you get set up!\n\nBest,\nSupport Team"
+      },
+      "metadata": {
+        "urgency": "low",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_030",
+      "category": "onboarding",
+      "incoming_email": {
+        "from": "emily@ecommerce.net",
+        "subject": "Importing data from Shopify",
+        "body": "Hi,\n\nWe are migrating from Shopify. I see there is an import tool, but I want to make sure it brings over customer order history, not just the products.\n\nDoes the importer support order history? Are there specific formats I need to use?\n\nEmily"
+      },
+      "reference_response": {
+        "subject": "Re: Importing data from Shopify",
+        "body": "Hi Emily,\n\nWe're thrilled you're moving over to us! \n\nYes, our Shopify importer does support customer order history. To ensure it comes over correctly, make sure you export your 'Orders' from Shopify using their standard CSV export format. Do not modify the column headers before uploading it to our tool.\n\nI've linked our detailed migration guide below for reference. Don't hesitate to reach out if you hit any roadblocks.\n\nBest,\nOnboarding Specialist"
+      },
+      "metadata": {
+        "urgency": "medium",
+        "sentiment": "positive",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_031",
+      "category": "onboarding",
+      "incoming_email": {
+        "from": "tom@builder.co",
+        "subject": "Can we schedule a demo call?",
+        "body": "Hi team,\n\nI signed up yesterday but the platform feels a bit overwhelming. Could we schedule a 30-minute walkthrough call with someone on your team?\n\nI want to make sure I am setting up the workflows correctly from the start.\n\nTom"
+      },
+      "reference_response": {
+        "subject": "Re: Can we schedule a demo call?",
+        "body": "Hi Tom,\n\nAbsolutely, I'd be happy to show you around! It's perfectly normal to feel a bit overwhelmed at first.\n\nYou can use my calendar link here: [Calendar Link] to book a 30-minute slot that works for you. Just let me know in the booking notes what specific workflows you're looking to build so I can tailor our session.\n\nLooking forward to speaking with you!\n\nBest,\nCustomer Success"
+      },
+      "metadata": {
+        "urgency": "low",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_032",
+      "category": "onboarding",
+      "incoming_email": {
+        "from": "sara@design.com",
+        "subject": "Inviting team members error",
+        "body": "Hello,\n\nI am trying to invite my team members via email during the setup wizard, but it keeps throwing a 'Domain not allowed' error.\n\nAll the emails end in @design.com. Help!\n\nSara"
+      },
+      "reference_response": {
+        "subject": "Re: Inviting team members error",
+        "body": "Hi Sara,\n\nI can help with that! This error usually happens when a security setting called 'Domain Restriction' is enabled on your account, and your domain hasn't been verified yet.\n\nI've gone ahead and manually verified @design.com for your workspace. You should now be able to invite your team without any issues. Please refresh the page and try again!\n\nBest,\nSupport Team"
+      },
+      "metadata": {
+        "urgency": "high",
+        "sentiment": "negative",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_033",
+      "category": "onboarding",
+      "incoming_email": {
+        "from": "chris@app.io",
+        "subject": "Question about user permissions",
+        "body": "Hi,\n\nI'm setting up my account and creating roles. If I set someone as a 'Manager', can they see billing information? I want them to manage projects but not see invoices.\n\nThe documentation is a bit vague on this point.\n\nChris"
+      },
+      "reference_response": {
+        "subject": "Re: Question about user permissions",
+        "body": "Hi Chris,\n\nGreat question! I can clarify that for you.\n\nUsers with the 'Manager' role have full access to projects, team assignments, and reporting, but they absolutely do NOT have access to billing information, invoices, or subscription settings. Only 'Admin' or 'Owner' roles can see billing details.\n\nLet me know if you have any other questions about permissions!\n\nBest,\nOnboarding Support"
+      },
+      "metadata": {
+        "urgency": "low",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_034",
+      "category": "complaint",
+      "incoming_email": {
+        "from": "angry.user@business.com",
+        "subject": "Terrible customer service experience",
+        "body": "I am furious. I opened a critical support ticket (#99281) three days ago regarding data loss, and I haven't received a single reply other than the automated auto-responder.\n\nWe are losing money every hour this is down. Your SLA promises a 4-hour response time. If this isn't resolved today, we are canceling our contract.\n\nFix this NOW."
+      },
+      "reference_response": {
+        "subject": "Re: Terrible customer service experience",
+        "body": "Hello,\n\nI am incredibly sorry for the unacceptable delay in responding to your critical ticket. You are absolutely right—we failed to meet our SLA, and I completely understand your frustration given the impact on your business.\n\nI have immediately escalated ticket #99281 to our highest tier engineering team. They are looking into your data recovery right now. I will personally act as your liaison and provide you with an update within the next hour.\n\nAgain, I sincerely apologize for dropping the ball here.\n\nBest regards,\nHead of Customer Support"
+      },
+      "metadata": {
+        "urgency": "high",
+        "sentiment": "negative",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_035",
+      "category": "complaint",
+      "incoming_email": {
+        "from": "josh@media.net",
+        "subject": "New UI is a disaster",
+        "body": "Hi,\n\nThe new update you pushed last night is horrible. You moved all the navigation buttons and hid the export feature behind three submenus. It's completely ruined my workflow.\n\nWhy change something that wasn't broken? Is there any way to roll back to the old interface?\n\nJosh"
+      },
+      "reference_response": {
+        "subject": "Re: New UI is a disaster",
+        "body": "Hi Josh,\n\nThank you for sharing your honest feedback. I'm sorry to hear the new interface is disrupting your workflow. We made these changes based on broader user testing, but I hear you loud and clear that it's made finding features like the export button much harder.\n\nWhile we don't have a way to roll back to the previous version, I have shared your specific feedback with our design team. We are actually planning a fast-follow update next week to surface the export button more prominently based on feedback like yours.\n\nBest,\nProduct Team"
+      },
+      "metadata": {
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_036",
+      "category": "complaint",
+      "incoming_email": {
+        "from": "megan@store.com",
+        "subject": "Charged twice this month!",
+        "body": "Hello,\n\nI just looked at my credit card statement and you guys charged me $49.99 on the 1st, and then another $49.99 today. \n\nThis is completely unacceptable. Refund the second charge immediately or I am disputing this with my bank.\n\nMegan"
+      },
+      "reference_response": {
+        "subject": "Re: Charged twice this month!",
+        "body": "Hi Megan,\n\nI apologize for this alarming error! I immediately looked into your account and found that a glitch in our automated billing system caused a duplicate charge to be processed today.\n\nI have already issued a full refund for the second $49.99 charge. It should appear back on your card within 3-5 business days. I've also added a $20 credit to your account for the inconvenience.\n\nThank you for bringing this to our attention.\n\nBest,\nBilling Support"
+      },
+      "metadata": {
+        "urgency": "high",
+        "sentiment": "negative",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_037",
+      "category": "complaint",
+      "incoming_email": {
+        "from": "carl@freelance.io",
+        "subject": "Constant spam emails from you",
+        "body": "I have unsubscribed from your marketing emails THREE times now, and I just got another one today about your new webinar.\n\nStop spamming me. If you send me one more email I am reporting you for CAN-SPAM violations."
+      },
+      "reference_response": {
+        "subject": "Re: Constant spam emails from you",
+        "body": "Hi Carl,\n\nI sincerely apologize for this. It is never our intention to send unwanted emails, and I understand how frustrating it is when unsubscribe requests aren't honored.\n\nI investigated and found a bug in our email provider sync that caused some unsubscribed addresses to be re-added to webinar lists. I have manually removed your email address from ALL our mailing lists permanently. You will not receive any further marketing communications from us.\n\nBest regards,\nSupport Team"
+      },
+      "metadata": {
+        "urgency": "high",
+        "sentiment": "negative",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_038",
+      "category": "complaint",
+      "incoming_email": {
+        "from": "olivia@corporate.com",
+        "subject": "Sales rep was very pushy",
+        "body": "Hi,\n\nI had a demo call yesterday with one of your sales reps (Mark). He was incredibly aggressive and kept pressuring me to sign a contract on the call, even after I said I needed to review it with my team.\n\nI am reconsidering using your software entirely because of this experience.\n\nOlivia"
+      },
+      "reference_response": {
+        "subject": "Re: Sales rep was very pushy",
+        "body": "Hi Olivia,\n\nI am so sorry to hear about your experience. That is absolutely not the standard we set for our team, and we never want you to feel pressured into a decision.\n\nI have escalated your feedback to the VP of Sales, who will be addressing this directly with Mark. If you are still open to it, we would love to pair you with a different account executive who respects your evaluation process. \n\nPlease let me know if you'd be open to this.\n\nBest regards,\nCustomer Success"
+      },
+      "metadata": {
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_039",
+      "category": "complaint",
+      "incoming_email": {
+        "from": "steve@builder.net",
+        "subject": "Your documentation is outdated",
+        "body": "Hello,\n\nI spent two hours trying to implement the user authentication flow following your official documentation, only to realize the endpoints listed were deprecated six months ago!\n\nThis is a massive waste of developer time. Keep your docs updated.\n\nSteve"
+      },
+      "reference_response": {
+        "subject": "Re: Your documentation is outdated",
+        "body": "Hi Steve,\n\nI completely agree with you—outdated documentation is incredibly frustrating, and I apologize for the time you lost because of this.\n\nYou are correct that the auth endpoints were recently updated. I've notified our developer relations team, and they are updating that specific guide today. In the meantime, you can find the current authentication flow documentation here: [Link to correct docs].\n\nThank you for calling this out so we can fix it.\n\nBest,\nDeveloper Support"
+      },
+      "metadata": {
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_040",
+      "category": "complaint",
+      "incoming_email": {
+        "from": "gina@logistics.co",
+        "subject": "Promises made, not delivered",
+        "body": "Hi,\n\nWhen we signed our annual contract, we were explicitly told by your team that the custom reporting module would be released by Q2. It's now Q3 and there's no sign of it.\n\nWe made our purchasing decision based on that promise. What is going on?\n\nGina"
+      },
+      "reference_response": {
+        "subject": "Re: Promises made, not delivered",
+        "body": "Hi Gina,\n\nI completely understand your frustration. You were given a timeline, and we failed to deliver on it. I apologize for the lack of communication regarding the delay.\n\nThe custom reporting module hit unexpected technical roadblocks during beta testing, forcing us to push the release to Q4 to ensure it's stable. Since this was a key factor in your purchase, I would like to offer you a 20% credit on your next renewal, or schedule a call with our Product Manager to discuss a custom workaround in the interim.\n\nPlease let me know how you'd like to proceed.\n\nBest regards,\nCustomer Success"
+      },
+      "metadata": {
+        "urgency": "high",
+        "sentiment": "negative",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_041",
+      "category": "general_inquiry",
+      "incoming_email": {
+        "from": "prospective.user@gmail.com",
+        "subject": "Do you offer a non-profit discount?",
+        "body": "Hello,\n\nI am looking into software options for our local animal shelter. Your platform looks great, but the standard pricing is a bit out of our budget.\n\nDo you offer any special pricing or discounts for registered non-profit organizations?\n\nThanks,\nKelly"
+      },
+      "reference_response": {
+        "subject": "Re: Do you offer a non-profit discount?",
+        "body": "Hi Kelly,\n\nThanks for reaching out! We love supporting organizations that do good work like your animal shelter.\n\nYes, we absolutely offer a non-profit discount. Registered 501(c)(3) organizations are eligible for a 50% discount on any of our standard plans. If you'd like to proceed, just sign up for a free trial and reply to this email with a copy of your tax exemption certificate, and I'll apply the discount to your account.\n\nBest,\nSales Team"
+      },
+      "metadata": {
+        "urgency": "low",
+        "sentiment": "positive",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_042",
+      "category": "general_inquiry",
+      "incoming_email": {
+        "from": "student@university.edu",
+        "subject": "Is there a student version?",
+        "body": "Hi,\n\nI am a computer science student and would love to use your platform for my senior project. \n\nDo you have a free student version or an educational license available?\n\nThanks!"
+      },
+      "reference_response": {
+        "subject": "Re: Is there a student version?",
+        "body": "Hi there,\n\nThat's great that you want to use our platform for your senior project! \n\nWe offer a free 'GitHub Student Developer Pack' integration. If you sign up using your authenticated GitHub student account, you will automatically receive 1 year of our Pro plan for free.\n\nGood luck with your project!\n\nBest,\nSupport Team"
+      },
+      "metadata": {
+        "urgency": "low",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_043",
+      "category": "general_inquiry",
+      "incoming_email": {
+        "from": "hiring@techcompany.com",
+        "subject": "Verification of employment",
+        "body": "To HR,\n\nWe are conducting a background check for a candidate named Jane Smith, who claims to have been employed at your company from 2020-2022.\n\nCan you please verify her dates of employment and title?\n\nThank you."
+      },
+      "reference_response": {
+        "subject": "Re: Verification of employment",
+        "body": "Hello,\n\nYou have reached the general customer support inbox. We do not have access to employee records.\n\nPlease direct all employment verification requests to our Human Resources department at hr@ourcompany.com. They will be able to assist you further.\n\nBest regards,\nSupport Team"
+      },
+      "metadata": {
+        "urgency": "low",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_044",
+      "category": "general_inquiry",
+      "incoming_email": {
+        "from": "info@partner.net",
+        "subject": "Partnership opportunity",
+        "body": "Hello,\n\nI run an agency that sets up CRM systems for small businesses. I think your product would be a great fit for many of our clients.\n\nDo you have an affiliate or agency partnership program?\n\nCheers,\nSam"
+      },
+      "reference_response": {
+        "subject": "Re: Partnership opportunity",
+        "body": "Hi Sam,\n\nThanks for your interest! We do indeed have a robust Agency Partner Program.\n\nPartners receive a 20% revenue share for every client they refer, as well as access to a dedicated partner dashboard and priority support. I've copied our Partnerships Manager, Sarah, on this email. She can provide you with more details and get you signed up.\n\nBest,\nSupport Team"
+      },
+      "metadata": {
+        "urgency": "medium",
+        "sentiment": "positive",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_045",
+      "category": "general_inquiry",
+      "incoming_email": {
+        "from": "user@gmail.com",
+        "subject": "Supported languages",
+        "body": "Hi,\n\nDoes your software support multiple languages? Specifically, I need the user interface to be available in Spanish and French for my international team.\n\nThanks."
+      },
+      "reference_response": {
+        "subject": "Re: Supported languages",
+        "body": "Hi there,\n\nYes, we do! Our platform is fully localized.\n\nCurrently, we support English, Spanish, French, German, and Japanese. Individual users can easily switch their interface language by going to their Profile > Preferences > Language. \n\nLet us know if you have any other questions!\n\nBest,\nSupport Team"
+      },
+      "metadata": {
+        "urgency": "low",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_046",
+      "category": "follow_up",
+      "incoming_email": {
+        "from": "alex@startup.io",
+        "subject": "Re: Issue with data export",
+        "body": "Hi again,\n\nJust following up on my previous email from Tuesday regarding the corrupted data export. \n\nDo you have an ETA on when this might be fixed? I really need that data for a meeting tomorrow.\n\nAlex"
+      },
+      "reference_response": {
+        "subject": "Re: Issue with data export",
+        "body": "Hi Alex,\n\nThanks for following up, and I apologize for the delay in getting back to you. \n\nOur engineers have identified the root cause (an issue with special characters in the dataset) and are testing the fix right now. We expect to deploy it within the next 2-3 hours. I will personally email you the moment it's live so you can pull your data before tomorrow's meeting.\n\nBest,\nSupport Team"
+      },
+      "metadata": {
+        "urgency": "high",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_047",
+      "category": "follow_up",
+      "incoming_email": {
+        "from": "brian@agency.com",
+        "subject": "Re: Upgrade question",
+        "body": "Hi,\n\nI never heard back from the sales rep you supposedly forwarded my question to regarding the Enterprise plan pricing.\n\nCan someone please get back to me? We are trying to make a decision this week.\n\nBrian"
+      },
+      "reference_response": {
+        "subject": "Re: Upgrade question",
+        "body": "Hi Brian,\n\nI sincerely apologize that nobody reached out to you yet. That is definitely not the experience we want to provide.\n\nI have just messaged our Sales Director directly, and they will be calling you within the next hour at the phone number listed on your account. I have also attached our standard Enterprise pricing sheet to this email for your immediate review.\n\nThank you for your patience.\n\nBest,\nCustomer Support"
+      },
+      "metadata": {
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_048",
+      "category": "follow_up",
+      "incoming_email": {
+        "from": "claire@retail.net",
+        "subject": "Re: Feature request: Custom tags",
+        "body": "Hi team,\n\nLast year you mentioned that custom tags were on the roadmap for Q1 of this year. We are now in Q2. \n\nIs there any update on when this feature will be released? We are really looking forward to it.\n\nClaire"
+      },
+      "reference_response": {
+        "subject": "Re: Feature request: Custom tags",
+        "body": "Hi Claire,\n\nGreat to hear from you! \n\nYou are correct, we did aim for Q1, but the scope of the custom tags feature expanded to include advanced filtering, which pushed our timeline back slightly.\n\nThe good news is that it is currently in final beta testing! We are targeting a full public release on May 15th. I'll make sure you are notified the moment it goes live.\n\nBest,\nProduct Team"
+      },
+      "metadata": {
+        "urgency": "low",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_049",
+      "category": "follow_up",
+      "incoming_email": {
+        "from": "dan@techcorp.com",
+        "subject": "Did you receive my W-9?",
+        "body": "Hello,\n\nI replied to the thread yesterday with our attached W-9 form as requested, but I didn't get a confirmation.\n\nCan you confirm you received it and that our account is now set to active?\n\nDan"
+      },
+      "reference_response": {
+        "subject": "Re: Did you receive my W-9?",
+        "body": "Hi Dan,\n\nYes, we received it! I apologize for not confirming sooner.\n\nYour W-9 has been processed, and your vendor profile is completely set up. Your account is fully active and the pending invoice has been marked as paid. \n\nLet us know if you need anything else.\n\nBest,\nBilling Department"
+      },
+      "metadata": {
+        "urgency": "low",
+        "sentiment": "positive",
+        "requires_action": true
+      }
+    },
+    {
+      "id": "email_050",
+      "category": "follow_up",
+      "incoming_email": {
+        "from": "eva@health.org",
+        "subject": "Re: Bug report - PDF generation",
+        "body": "Hi,\n\nYou mentioned this bug was fixed in yesterday's patch, but we are still seeing the text overlap issue when generating PDFs.\n\nI have cleared my cache and tried different browsers. Attached is a screenshot of the issue still happening today.\n\nEva"
+      },
+      "reference_response": {
+        "subject": "Re: Bug report - PDF generation",
+        "body": "Hi Eva,\n\nOh no, I'm so sorry to see that it's still happening! Thank you for providing the screenshot and confirming you cleared your cache.\n\nI've reopened the engineering ticket and passed this new information to the developers. It looks like the fix might not have covered all edge cases. I will prioritize this and keep you updated on their progress today.\n\nBest,\nTechnical Support"
+      },
+      "metadata": {
+        "urgency": "high",
+        "sentiment": "negative",
+        "requires_action": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "results": [
+    {
+      "email_id": "email_001",
+      "category": "billing",
+      "incoming_email": {
+        "from": "sarah.chen@techcorp.io",
+        "subject": "Invoice discrepancy for July",
+        "body": "Hi,\n\nI noticed our July invoice shows $2,400 but we're on the Growth plan at $1,800/month. Could you explain the difference?\n\nIs there an overage fee we missed? We need to get this resolved before accounting closes the month.\n\nThanks,\nSarah"
+      },
+      "reference_response": {
+        "subject": "Re: Invoice discrepancy for July",
+        "body": "Hi Sarah,\n\nThank you for reaching out about this. I've looked into your account and can see the difference is due to the additional 20 user licenses added mid-month.\n\nThe prorated cost for these licenses comes to $600. You can view the exact breakdown on page 2 of the attached invoice PDF.\n\nBest regards,\nSupport Team"
+      },
+      "generated_response": {
+        "subject": "Re: Invoice discrepancy for July",
+        "body": "Error generating response. Please try again later."
+      },
+      "generation_time_seconds": 42.08,
+      "metadata": {
+        "urgency": "medium",
+        "sentiment": "neutral",
+        "requires_action": true
+      }
+    }
+  ],
+  "summary": {
+    "total": 1,
+    "successful": 1,
+    "failed": 0,
+    "avg_generation_time": 42.08
+  }
+}
