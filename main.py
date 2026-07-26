@@ -222,7 +222,7 @@ Examples:
 
     console.print(Panel(
         "[bold blue]Hiver AI Email Response System[/bold blue]\n"
-        "[dim]RAG-powered email reply suggestions using Gemini[/dim]",
+        "[dim]RAG-powered email reply suggestions using Groq[/dim]",
         border_style="blue",
         padding=(1, 2)
     ))

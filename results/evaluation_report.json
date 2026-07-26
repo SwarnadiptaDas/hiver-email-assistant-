@@ -1,0 +1,121 @@
+{
+  "total_evaluated": 1,
+  "overall_composite": {
+    "mean": 0.7775000357627869,
+    "median": 0.7775000357627869,
+    "std": 0.0,
+    "min": 0.7775000357627869,
+    "max": 0.7775000357627869
+  },
+  "per_metric_stats": {
+    "semantic_similarity": {
+      "mean": 1.000000238418579,
+      "median": 1.000000238418579,
+      "std": 0.0
+    },
+    "intent_coverage": {
+      "mean": 0.75,
+      "median": 0.75,
+      "std": 0.0
+    },
+    "tone": {
+      "mean": 0.8,
+      "median": 0.8,
+      "std": 0.0
+    },
+    "completeness": {
+      "mean": 1,
+      "median": 1,
+      "std": 0.0
+    },
+    "actionability": {
+      "mean": 0.2,
+      "median": 0.2,
+      "std": 0.0
+    },
+    "fluency": {
+      "mean": 0.0,
+      "median": 0.0,
+      "std": 0.0
+    },
+    "overall_judge": {
+      "mean": 1,
+      "median": 1,
+      "std": 0.0
+    }
+  },
+  "per_category_stats": {
+    "billing": {
+      "mean": 0.7775000357627869,
+      "count": 1
+    }
+  },
+  "individual_results": [
+    {
+      "email_id": "email_001",
+      "email_subject": "Invoice discrepancy for July",
+      "category": "billing",
+      "metrics": {
+        "semantic_similarity": {
+          "score": 1.000000238418579
+        },
+        "intent_coverage": {
+          "score": 0.75,
+          "intents_found": [
+            "question about invoice discrepancy",
+            "request for explanation of overage fee",
+            "need to resolve issue before accounting closes the month"
+          ],
+          "intents_addressed": [
+            "question about invoice discrepancy",
+            "request for explanation of overage fee"
+          ],
+          "reasoning": "The response addresses the main question about the invoice discrepancy and explains the reason for the difference, which is the additional user licenses and the prorated cost. However, it does not explicitly address the concern about resolving the issue before accounting closes the month, although it provides the necessary information for Sarah to potentially resolve the issue on her own."
+        },
+        "tone": {
+          "score": 0.8,
+          "reasoning": {
+            "professionalism": 1,
+            "empathy": 0.4,
+            "appropriateness": 0.9
+          }
+        },
+        "completeness": {
+          "score": 1,
+          "missing_points": [],
+          "reasoning": "The generated response covers all the key information and points that the reference response covers. It explains the reason for the difference in the invoice, mentions the prorated cost of the additional licenses, and provides instructions on where to view the exact breakdown. The generated response is almost identical to the reference response, indicating that it fully addresses the concerns and questions raised in the incoming email."
+        },
+        "actionability": {
+          "score": 0.2,
+          "actions_found": [],
+          "reasoning": "The response provides an explanation for the issue and includes an attachment with more information, but it does not provide clear next steps for the customer. There are no specific actions, timelines, or follow-up instructions, leaving the customer without a clear understanding of what to do next or what to expect."
+        },
+        "fluency": {
+          "grammatical_correctness": 1.0,
+          "readability": 0.9,
+          "natural_flow": 0.9,
+          "overall_score": 0.93,
+          "reasoning": {
+            "grammatical_correctness": "The email is free of grammatical errors, with proper sentence structure and punctuation.",
+            "readability": "The language used is clear and concise, but some technical terms like 'prorated cost' might be unfamiliar to non-technical readers, which slightly reduces readability.",
+            "natural_flow": "The email follows a logical structure, introducing the issue, explaining the cause, and providing a solution. However, the transition to the sentence about the invoice PDF could be smoother, which is why it doesn't score a perfect 1.0."
+          }
+        },
+        "overall_judge": {
+          "score": 1,
+          "reasoning": "The generated response accurately answers the customer's question, providing a clear explanation for the difference in the invoice amount. It is helpful, as it includes a specific breakdown of the costs and directs the customer to the relevant information. The tone is professional, and the response addresses the customer's urgency, implying that the issue will be resolved promptly. Overall, a customer would be satisfied with this response, as it is succinct, informative, and courteous."
+        }
+      },
+      "composite_score": 0.7775000357627869,
+      "weights_used": {
+        "semantic_similarity": 0.15,
+        "intent_coverage": 0.25,
+        "tone": 0.15,
+        "completeness": 0.2,
+        "actionability": 0.1,
+        "fluency": 0.05,
+        "overall_judge": 0.1
+      }
+    }
+  ]
+}

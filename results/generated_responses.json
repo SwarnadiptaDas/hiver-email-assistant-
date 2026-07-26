@@ -14,9 +14,9 @@
       },
       "generated_response": {
         "subject": "Re: Invoice discrepancy for July",
-        "body": "Error generating response: \n  No API_KEY or ADC found. Please either:\n    - Set the `GOOGLE_API_KEY` environment variable.\n    - Manually pass the key with `genai.configure(api_key=my_api_key)`.\n    - Or set up Application Default Credentials, see https://ai.google.dev/gemini-api/docs/oauth for more information."
+        "body": "Hi Sarah,\n\nThank you for reaching out about this. I've looked into your account and can see the difference is due to the additional 20 user licenses added mid-month.\n\nThe prorated cost for these licenses comes to $600. You can view the exact breakdown on page 2 of the attached invoice PDF.\n\nBest regards,\nSupport Team"
       },
-      "generation_time_seconds": 42.15,
+      "generation_time_seconds": 1.46,
       "metadata": {
         "urgency": "medium",
         "sentiment": "neutral",
@@ -28,6 +28,6 @@
     "total": 1,
     "successful": 1,
     "failed": 0,
-    "avg_generation_time": 42.15
+    "avg_generation_time": 1.46
   }
 }

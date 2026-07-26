@@ -36,28 +36,58 @@ class LLMMetrics:
         
     def _parse_json_response(self, text: str) -> Dict[str, Any]:
         """Robustly parse JSON from LLM response."""
+        data = None
         try:
             # Try parsing directly
-            return json.loads(text)
+            data = json.loads(text)
         except json.JSONDecodeError:
             # Extract JSON from markdown block if present
             json_match = re.search(r'```(?:json)?\s*([\s\S]*?)\s*```', text)
             if json_match:
                 try:
-                    return json.loads(json_match.group(1))
+                    data = json.loads(json_match.group(1))
                 except json.JSONDecodeError:
                     pass
-                    
-            # Try to find something that looks like JSON structure
-            json_match = re.search(r'(\{[\s\S]*\})', text)
-            if json_match:
-                try:
-                    return json.loads(json_match.group(1))
-                except json.JSONDecodeError:
-                    pass
-                    
-        print(f"Failed to parse JSON from response: {text}")
-        return {"score": 0.0, "reasoning": "Failed to parse LLM evaluation JSON"}
+            
+            if not data:
+                # Try to find something that looks like JSON structure
+                json_match = re.search(r'(\{[\s\S]*\})', text)
+                if json_match:
+                    try:
+                        data = json.loads(json_match.group(1))
+                    except json.JSONDecodeError:
+                        pass
+                        
+        if not data:
+            print(f"Failed to parse JSON from response: {text}")
+            return {"score": 0.0, "reasoning": "Failed to parse LLM evaluation JSON"}
+
+        # Normalize score field if it's nested or missing
+        if "score" not in data:
+            # Check for common variants
+            for k in ["overall_score", "rating"]:
+                if k in data:
+                    data["score"] = data[k]
+                    break
+            else:
+                data["score"] = 0.0
+
+        # If score is a dictionary or non-float/int, extract it
+        if isinstance(data["score"], dict):
+            # Check for nested values
+            for k in ["score", "rating", "overall"]:
+                if k in data["score"]:
+                    data["score"] = data["score"][k]
+                    break
+            else:
+                data["score"] = 0.0
+                
+        try:
+            data["score"] = float(data["score"])
+        except (ValueError, TypeError):
+            data["score"] = 0.0
+
+        return data
 
     def _call_llm(self, prompt: str, max_retries: int = 3) -> Dict[str, Any]:
         """Call LLM with retry logic and rate limiting."""
