@@ -91,6 +91,16 @@ st.markdown("""
     /* Headings */
     h1, h2, h3 { color: #e0e0ff !important; }
     
+    /* General Text */
+    p, span, label, .stMarkdown p { color: white !important; }
+
+    /* Input Fields */
+    input, textarea, [data-baseweb="input"] input, [data-baseweb="textarea"] textarea {
+        color: black !important;
+        background-color: white !important;
+        border-radius: 6px;
+    }
+    
     /* Code blocks */
     .email-box {
         background: rgba(255,255,255,0.04);
