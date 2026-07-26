@@ -91,8 +91,10 @@ st.markdown("""
     /* Headings */
     h1, h2, h3 { color: #e0e0ff !important; }
     
-    /* General Text */
-    p, span, label, .stMarkdown p { color: white !important; }
+    /* General Text & Tables */
+    p, span, label, .stMarkdown p, li, td, th { color: white !important; }
+    table { border-color: rgba(255,255,255,0.1) !important; }
+    th, td { border-bottom: 1px solid rgba(255,255,255,0.1) !important; }
 
     /* Input Fields */
     input, textarea, [data-baseweb="input"] input, [data-baseweb="textarea"] textarea {
